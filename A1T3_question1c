@@ -1,0 +1,8 @@
+# The first column of data consistent with the order of expression.tab and annotation.tab , and the first column of the new file the same order were called expression_new.tab and annotation_new.tab . The code has shown below:
+head -1 expression.tab > expression_new.tab
+tail -n +2 expression.tab | sort -t$'\t' -k 1 >> expression_new.tab
+cat expression_new.tab
+head -1 annotation.tab > annotation_new.tab
+tail -n +2 annotation.tab | sort -t$'\t' -k 1 >> annotation_new.tab
+# use the join command 
+join expression_new.tab annotation_new.tab
