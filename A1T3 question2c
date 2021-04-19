@@ -1,1 +1,1 @@
-select distinct m.MemberID, Lastname, FirstName from Member m, Entry e where not exists (select * from Entry e where e.MemberID=m.MemberID and e.Year=2014) and m.MemberID=e.MemberID;
+select distinct m.MemberID, Lastname, FirstName from Member m, Entry e where not exists (select * from Entry e where e.MemberID=m.MemberID and e.Year=2013) and m.MemberID=e.MemberID;
